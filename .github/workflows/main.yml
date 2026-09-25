@@ -24,9 +24,10 @@ jobs:
 
       - name: Build Debug APK
         run: gradle assembleDebug
+        working-directory: nano01-mqtt-bridge
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: nano01-mqtt-bridge-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: nano01-mqtt-bridge/app/build/outputs/apk/debug/app-debug.apk
