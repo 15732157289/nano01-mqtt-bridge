@@ -109,8 +109,8 @@ public class MqttBridgeService extends Service {
             });
 
             localClient.connect(opts);
-            localClient.subscribe("cn.com.pateo.tbox.#", 0);
-            Log.i(TAG, "本地车机MQTT连接成功，已订阅 cn.com.pateo.tbox.#");
+            localClient.subscribe("#", 0);
+            Log.i(TAG, "本地车机MQTT连接成功，已订阅所有主题 #");
             return true;
         } catch (Exception e) {
             Log.e(TAG, "本地连接错误: " + e.getMessage());
